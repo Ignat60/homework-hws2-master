@@ -1,0 +1,28 @@
+.App {
+  --header_height: 60px;
+}
+
+.hw {
+  margin: 0 auto;
+  padding: 15px;
+  max-width: 1280px;
+  height: 720px;
+  border: solid #06c 3px;
+
+  /* display: flex;
+  justify-content: space-between; */
+}
+
+.hwTitle {
+  margin-left: 350px;
+  color: #000;
+  font-family: Montserrat;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+/* .hw div {
+  display: inline-block;
+
+} */
