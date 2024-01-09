@@ -8,7 +8,7 @@
 .textarea {
   font-size: 17px;
   width: 776px;
-  height: 20px;
+  min-height: 50px;
   resize: none;
   border: 3px solid #06c;
   border-radius: 20px;

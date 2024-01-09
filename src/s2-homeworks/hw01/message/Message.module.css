@@ -1,21 +1,28 @@
 .message {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
   right: 20px;
 }
 
 .imageAndText {
   display: flex;
-  flex-direction: row-reverse;
+  /* flex-direction: row-reverse; */
 }
 
 .imageAndText img {
   width: 48px;
   height: 48px;
+  margin: 10px;
 }
 
 .text {
   width: 527px;
-  height: 60px;
+  min-height: 60px;
+  padding: 5px;
+  border-radius: 10px;
   background-color: rgba(0, 102, 204, 0.684);
 }
 
@@ -25,7 +32,8 @@
 .name {
   display: inline-block;
   position: relative;
-  left: 430px;
+  text-align: right;
+  /* left: 430px; */
 }
 
 .messageText {
@@ -33,7 +41,7 @@
 
 .time {
   font-size: 15px;
-  display: inline-block;
-  position: relative;
-  left: 1205px;
+  /* display: inline-block; */
+  /* position: relative; */
+  /* left: 1205px; */
 }
