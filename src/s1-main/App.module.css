@@ -5,6 +5,9 @@
 .hw {
   margin: 0 auto;
   padding: 15px;
+  /* width: 1280px;
+  height: 373px; */
+  flex-shrink: 0;
   max-width: 1280px;
   height: 720px;
   border: solid #06c 3px;

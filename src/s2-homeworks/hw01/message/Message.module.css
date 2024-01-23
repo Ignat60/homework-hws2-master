@@ -2,45 +2,66 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
   align-items: flex-end;
   right: 20px;
 }
 
 .imageAndText {
   display: flex;
-  /* flex-direction: row-reverse; */
 }
 
 .imageAndText img {
   width: 48px;
   height: 48px;
-  margin: 10px;
+  flex-shrink: 0;
+  /* width: 48px;
+  height: 48px;
+  margin: 10px; */
 }
 
 .text {
+  display: flex;
+  flex-direction: column;
   width: 527px;
   min-height: 60px;
-  padding: 5px;
+  padding: 10px;
   border-radius: 10px;
   background-color: rgba(0, 102, 204, 0.684);
+
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .text:after {
 }
 
 .name {
-  display: inline-block;
-  position: relative;
-  text-align: right;
-  /* left: 430px; */
+  text-align: end;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 .messageText {
 }
 
 .time {
-  font-size: 15px;
+  color: #000;
+  font-family: Montserrat;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding-right: 10px;
+  /* font-size: 15px; */
   /* display: inline-block; */
   /* position: relative; */
   /* left: 1205px; */
