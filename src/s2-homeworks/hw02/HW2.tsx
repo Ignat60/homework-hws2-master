@@ -39,27 +39,40 @@ export const filterAffairs = (
   affairs: AffairType[],
   filter: FilterType
 ): Array<AffairType> => {
-  // need to fix any
-
-  return affairs; // need to fix
+  switch (filter) {
+    case "high":
+      return affairs.filter((el) => el.priority === "high");
+    case "middle":
+      return affairs.filter((el) => el.priority === "middle");
+    case "low":
+      return affairs.filter((el) => el.priority === "low");
+    default:
+      return affairs;
+  }
 };
-export const deleteAffair = (
-  affairs: AffairType[],
-  _id: number
-): AffairType[] => {
-  // need to fix any
 
-  return affairs; // need to fix
+export const deleteAffair = (affairs: AffairType[], _id: number) => {
+  const newAffairs: AffairType[] = affairs.filter((el) => el._id !== _id);
+  return newAffairs;
 };
 
 function HW2() {
   const [affairs, setAffairs] = useState<AffairType[]>(defaultAffairs);
   const [filter, setFilter] = useState<FilterType>("all");
 
-  const filteredAffairs = filterAffairs(affairs, filter);
-  const deleteAffairCallback = (_id: any) => {
-    // need to fix any
-    // need to fix
+  let filteredAffairs = filterAffairs(affairs, filter);
+
+  const setFilterHandler = (filter: FilterType) => {
+    console.log(filter);
+    setFilter(filter);
+
+    let filteredAffairs = filterAffairs(affairs, filter);
+    setAffairs(filteredAffairs);
+  };
+
+  const deleteAffairCallback = (_id: number) => {
+    console.log("test ");
+    setAffairs(deleteAffair(affairs, _id));
   };
 
   return (
@@ -68,7 +81,7 @@ function HW2() {
       <div className={s2.hw}>
         <Affairs
           data={filteredAffairs}
-          setFilter={setFilter}
+          setFilter={setFilterHandler}
           deleteAffairCallback={deleteAffairCallback}
           filter={filter}
         />
