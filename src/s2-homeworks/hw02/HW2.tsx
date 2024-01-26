@@ -63,7 +63,8 @@ function HW2() {
   let filteredAffairs = filterAffairs(affairs, filter);
 
   const setFilterHandler = (filter: FilterType) => {
-    console.log(filter);
+    debugger;
+    console.log("Looking for ALL");
     setFilter(filter);
 
     let filteredAffairs = filterAffairs(affairs, filter);
