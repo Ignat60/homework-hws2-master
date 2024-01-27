@@ -63,12 +63,12 @@ function HW2() {
   let filteredAffairs = filterAffairs(affairs, filter);
 
   const setFilterHandler = (filter: FilterType) => {
-    debugger;
+    // debugger;
     console.log("Looking for ALL");
     setFilter(filter);
 
-    let filteredAffairs = filterAffairs(affairs, filter);
-    setAffairs(filteredAffairs);
+    // let filteredAffairs = filterAffairs(defaultAffairs, filter);
+    setAffairs(filterAffairs(defaultAffairs, filter));
   };
 
   const deleteAffairCallback = (_id: number) => {
