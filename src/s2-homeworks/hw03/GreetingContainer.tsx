@@ -13,11 +13,12 @@ export const pureAddUser = (
   setName: (name: string) => void,
   addUserCallback: (name: string) => void
 ) => {
-  addUserCallback(name);
-  if (name) {
-    setName(name);
-  } else {
+  if (name === "") {
     setError("Message Error");
+  } else {
+    setName(name);
+    addUserCallback(name);
+    setName("");
   }
 
   // если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут
@@ -40,17 +41,17 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
   addUserCallback,
 }) => {
   // деструктуризация пропсов
-  const [name, setName] = useState<string>(""); // need to fix any
-  const [error, setError] = useState<any>(""); // need to fix any
 
-  const setNameCallback = (e: any) => {
-    // need to fix any
-    setName("some name"); // need to fix
+  const [name, setName] = useState<string>("");
+  const [error, setError] = useState<boolean>(false);
 
-    error && setError("");
+  const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => {
+    setName(e.currentTarget.value);
+
+    // error && setError("");
   };
   const addUser = () => {
-    pureAddUser(name, setError, setName, addUserCallback);
+    // pureAddUser(name, setError, setName, addUserCallback);
   };
 
   const onBlur = () => {
