@@ -7,7 +7,6 @@ type GreetingContainerPropsType = {
   users: UserType[];
   addUserCallback: (name: string) => void;
 };
-
 export const pureAddUser = (
   name: string,
   setError: (errorMessage: boolean) => void,
@@ -17,44 +16,40 @@ export const pureAddUser = (
   if (name === "") {
     setError(true);
   } else {
+    console.log(name);
+
     setName(name);
     addUserCallback(name);
     setName("");
   }
-
-  // если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут
 };
 
 export const pureOnBlur = (
   name: string,
   setError: (errorMessage: boolean) => void
 ) => {
-  if (name === "") {
-    setError(true);
-  }
-
-  // если имя пустое - показать ошибку
+  if (name === "") setError(true);
 };
 
-export const pureOnEnter = (e: any, addUser: any) => {
-  // если нажата кнопка Enter - добавить
+export const pureOnEnter = (
+  e: KeyboardEvent<HTMLInputElement>,
+  addUser: any
+) => {
+  e.key === "Enter" && addUser();
 };
 
-// более простой и понятный для новичков
-// function GreetingContainer(props: GreetingPropsType) {
-
-// более современный и удобный для про :)
 const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
   users,
   addUserCallback,
 }) => {
-  // деструктуризация пропсов
   const [name, setName] = useState<string>("");
   const [error, setError] = useState<boolean>(false);
   console.log(name);
 
   const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => {
-    setName(e.currentTarget.value);
+    let carrentValue = e.currentTarget.value;
+    setName(carrentValue);
+    carrentValue && setError(false);
 
     if (e.currentTarget.value.length > 5) setError(true);
     // error && setError("");
@@ -67,7 +62,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     pureOnBlur(name, setError);
   };
 
-  const onEnter = (e: any) => {
+  const onEnter = (e: KeyboardEvent<HTMLInputElement>) => {
     pureOnEnter(e, addUser);
   };
 
