@@ -7,7 +7,7 @@ type GreetingPropsType = {
   addUser: () => void;
   onBlur: () => void;
   onEnter: (e: KeyboardEvent<HTMLInputElement>) => void;
-  error: boolean;
+  error: string;
   totalUsers: number; // need to fix any
   lastUserName?: string; // need to fix any
 };
@@ -46,7 +46,7 @@ const Greeting: React.FC<GreetingPropsType> = (
             onBlur={onBlur}
           />
           <div id={"hw3-error"} className={s.error}>
-            {error ? "Print you name " : ""}
+            {error}
           </div>
         </div>
 

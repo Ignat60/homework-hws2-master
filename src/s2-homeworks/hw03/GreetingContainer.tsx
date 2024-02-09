@@ -9,12 +9,12 @@ type GreetingContainerPropsType = {
 };
 export const pureAddUser = (
   name: string,
-  setError: (errorMessage: boolean) => void,
+  setError: (errorMessage: string) => void,
   setName: (name: string) => void,
   addUserCallback: (name: string) => void
 ) => {
-  if (name === "") {
-    setError(true);
+  if (name.trim() === "") {
+    setError("Ошибка! Введите имя!");
   } else {
     console.log(name);
 
@@ -26,9 +26,9 @@ export const pureAddUser = (
 
 export const pureOnBlur = (
   name: string,
-  setError: (errorMessage: boolean) => void
+  setError: (errorMessage: string) => void
 ) => {
-  if (name === "") setError(true);
+  if (name === "") setError("Ошибка! Введите имя!");
 };
 
 export const pureOnEnter = (
@@ -43,13 +43,13 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
   addUserCallback,
 }) => {
   const [name, setName] = useState<string>("");
-  const [error, setError] = useState<boolean>(false);
+  const [error, setError] = useState<string>("");
   // console.log(name);
 
   const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => {
     let carrentValue = e.currentTarget.value;
     setName(carrentValue);
-    carrentValue && setError(false);
+    carrentValue && setError("");
   };
   const addUser = () => {
     pureAddUser(name, setError, setName, addUserCallback);
