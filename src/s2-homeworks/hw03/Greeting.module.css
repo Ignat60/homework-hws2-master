@@ -2,6 +2,7 @@
 }
 
 .inputAndButtonContainer {
+  display: flex;
 }
 
 .error {

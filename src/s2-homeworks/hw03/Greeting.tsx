@@ -1,5 +1,6 @@
 import React, { ChangeEvent, KeyboardEvent } from "react";
 import s from "./Greeting.module.css";
+import Button from "@mui/material/Button";
 
 type GreetingPropsType = {
   name: string;
@@ -49,15 +50,23 @@ const Greeting: React.FC<GreetingPropsType> = (
             {error}
           </div>
         </div>
-
-        <button
+        <Button
+          variant="contained"
+          id={"hw3-button"}
+          onClick={addUser}
+          className={s.button}
+          disabled={!name.trim()}
+        >
+          Contained
+        </Button>
+        {/* <button
           id={"hw3-button"}
           onClick={addUser}
           className={s.button}
           disabled={!name.trim()}
         >
           add
-        </button>
+        </button> */}
       </div>
 
       {lastUserName && (
