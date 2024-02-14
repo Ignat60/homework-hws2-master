@@ -29,6 +29,9 @@
   border-radius: 3px;
   border: none;
 }
+.defaultButton:hover {
+  cursor: pointer;
+}
 
 .redButton {
   width: 75px;
@@ -37,4 +40,19 @@
   color: white;
   border-radius: 3px;
   border: none;
+}
+.redButton:hover {
+  cursor: pointer;
+}
+
+.disabledButton {
+  width: 75px;
+  height: 25px;
+  background-color: #8ab4ec;
+  color: white;
+  border-radius: 3px;
+  border: none;
+}
+.disabledButton:hover {
+  cursor: pointer;
 }
