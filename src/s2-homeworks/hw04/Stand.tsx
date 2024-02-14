@@ -19,6 +19,7 @@ const Stand = () => {
             id={"hw4-super-input-like-old"}
             value={stateForAllInputs}
             onChange={(e) => setValue(e.currentTarget.value)}
+            className={s.superInput}
           />
         </div>
         {/*инпут с ошибкой:*/}
@@ -87,7 +88,7 @@ const Stand = () => {
             checked={stateForAllCheckboxes}
             onChangeChecked={setChecked}
           >
-            some text
+            Hometask
           </SuperCheckbox>
         </div>
         {/*совместим со старым кодом:*/}
