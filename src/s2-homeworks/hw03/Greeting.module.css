@@ -3,6 +3,7 @@
 
 .inputAndButtonContainer {
   display: flex;
+  align-items: center;
 }
 
 .error {
@@ -10,9 +11,14 @@
 }
 
 .input {
+  outline: none;
+  display: inline-block;
+  height: 20px;
 }
 
 .input:focus {
+  height: 22px;
+  background-color: #f5f4e0;
 }
 
 .errorInput {
@@ -20,19 +26,30 @@
 }
 
 .button {
+  width: 40px;
+  height: 20px;
+  border-radius: 3px;
+  background-color: #317bdb;
   display: flex;
-  justify-self: start;
   justify-content: center;
   align-items: center;
+  margin-left: 10px;
+  /* margin-top: 2px; */
+  color: white;
+}
+.button:hover {
+  cursor: pointer;
 }
 
 .button:focus {
+  border: 2px solid rgb(182, 22, 22);
 }
 
 .button:active {
 }
 
 .button:disabled {
+  background-color: #a4c5f0;
 }
 
 .text {

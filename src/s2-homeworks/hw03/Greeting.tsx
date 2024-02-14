@@ -29,14 +29,14 @@ const Greeting: React.FC<GreetingPropsType> = (
   // const inputClass =  s.errorInput; // need to fix with (?:)
   let inputClass = error ? s.errorInput : ""; // need to fix with (?:)
 
-  const styles = {
-    maxWidth: "40px",
-    maxHeight: "20px",
-    minWidth: "40px",
-    minHeight: "20px",
-    backgroundColor: "#0077ff",
-    marginLeft: "10px",
-  };
+  // const styles = {
+  //   maxWidth: "40px",
+  //   maxHeight: "20px",
+  //   minWidth: "40px",
+  //   minHeight: "20px",
+  //   backgroundColor: "#0077ff",
+  //   marginLeft: "10px",
+  // };
 
   return (
     <div id={"hw3-form"} className={s.greetingForm}>
@@ -51,7 +51,7 @@ const Greeting: React.FC<GreetingPropsType> = (
             id={"hw3-input"}
             value={name}
             onChange={setNameCallback}
-            className={inputClass}
+            className={s.input}
             onKeyDown={onEnter}
             onBlur={onBlur}
           />
@@ -59,25 +59,25 @@ const Greeting: React.FC<GreetingPropsType> = (
             {error}
           </div>
         </div>
-        <Button
+        {/* <Button
           variant="contained"
           id={"hw3-button"}
           onClick={addUser}
           className={s.button}
           disabled={!name.trim()}
-          style={styles}
+          // style={styles}
           color="primary"
         >
           add
-        </Button>
-        {/* <button
+        </Button> */}
+        <button
           id={"hw3-button"}
           onClick={addUser}
           className={s.button}
           disabled={!name.trim()}
         >
           add
-        </button> */}
+        </button>
       </div>
 
       {lastUserName && (
