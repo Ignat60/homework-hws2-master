@@ -21,6 +21,15 @@
   flex-direction: column;
   gap: 36px;
 }
+.defaultButton {
+  width: 75px;
+  height: 25px;
+  background-color: #317bdb;
+  color: white;
+  border-radius: 3px;
+  border: none;
+}
+
 .redButton {
   width: 75px;
   height: 25px;
