@@ -69,7 +69,11 @@ const Stand = () => {
         </div>
         {/*задизэйбленная кнопка:*/}
         <div>
-          <SuperButton id={"hw4-super-button-secondary"} xType={"secondary"}>
+          <SuperButton
+            id={"hw4-super-button-secondary"}
+            xType={"secondary"}
+            className={s.secondaryButton}
+          >
             secondary
           </SuperButton>
         </div>

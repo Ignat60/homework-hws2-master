@@ -56,3 +56,14 @@
 .disabledButton:hover {
   cursor: pointer;
 }
+.secondaryButton {
+  width: 95px;
+  height: 25px;
+  background-color: white;
+  color: #317bdb;
+  border-radius: 3px;
+  border: solid 1px #317bdb;
+}
+.secondaryButton:hover {
+  cursor: pointer;
+}
