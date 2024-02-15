@@ -2,6 +2,7 @@
 }
 
 .disabled {
+  background-color: aquamarine;
 }
 
 .secondary {
@@ -21,7 +22,6 @@
 
 .secondary:hover {
 }
-
 
 .default:active {
 }
