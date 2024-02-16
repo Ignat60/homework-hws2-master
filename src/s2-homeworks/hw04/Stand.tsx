@@ -61,8 +61,8 @@ const Stand = () => {
         <div>
           <SuperButton
             id={"hw4-super-button-disabled"}
-            xType={"red"}
-            // className={"disabledButton"}
+            xType={"s.disabled"}
+            // className={s.disabledButton}
             disabled
           >
             disabled
@@ -73,7 +73,7 @@ const Stand = () => {
           <SuperButton
             id={"hw4-super-button-secondary"}
             xType={"secondary"}
-            className={s.secondaryButton}
+            // className={s.secondaryButton}
           >
             secondary
           </SuperButton>

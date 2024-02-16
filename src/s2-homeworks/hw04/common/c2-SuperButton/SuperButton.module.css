@@ -1,17 +1,46 @@
 .button {
+  width: 132px;
+  height: 30px;
 }
 
 .disabled {
-  background-color: aquamarine;
+  width: 132px;
+  height: 30px;
+  background-color: #8ab4ec;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
 }
 
 .secondary {
+  width: 132px;
+  height: 30px;
+  background-color: white;
+  color: #317bdb;
+  border-radius: 5px;
+  border: solid 1px #317bdb;
+  font-size: 15px;
 }
 
 .default {
+  width: 132px;
+  height: 30px;
+  background-color: #317bdb;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
 }
 
 .red {
+  width: 132px;
+  height: 30px;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
 }
 
 .default:hover {

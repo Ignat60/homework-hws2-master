@@ -1,21 +1,24 @@
 .stand {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  /* margin-top: 100px; */
   height: 50%;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #e8e59a;
 }
 
 .inputs {
   display: flex;
   flex-direction: column;
   gap: 48px;
+  background-color: #79baec;
 }
 .superInput {
   display: inline-block;
-  width: 300px;
-  height: 40px;
-  border: 1px solid rgb(174, 174, 174);
+  width: 372px;
+  height: 36px;
+  border: 1px solid rgb(209, 197, 197);
   border-radius: 5px;
 }
 
@@ -23,56 +26,62 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-  margin-top: 65px;
+  margin-top: 60px;
+  background-color: #aae89a;
 }
 
 .checkboxes {
   display: flex;
   flex-direction: column;
   gap: 36px;
+  background-color: #dec0eb;
 }
 .defaultButton {
-  width: 75px;
-  height: 25px;
+  /* width: 132px;
+  height: 30px;
   background-color: #317bdb;
   color: white;
-  border-radius: 3px;
+  border-radius: 5px;
   border: none;
+  font-size: 15px; */
 }
 .defaultButton:hover {
   cursor: pointer;
 }
 
 .redButton {
-  width: 75px;
-  height: 25px;
+  /* width: 132px;
+  height: 30px;
   background-color: red;
   color: white;
-  border-radius: 3px;
+  border-radius: 5px;
   border: none;
+  font-size: 15px; */
 }
 .redButton:hover {
   cursor: pointer;
 }
 
 .disabledButton {
-  width: 75px;
-  height: 25px;
+  /* width: 132px;
+  height: 30px;
   background-color: #8ab4ec;
   color: white;
-  border-radius: 3px;
+  border-radius: 5px;
   border: none;
+  font-size: 15px; */
 }
 .disabledButton:hover {
   cursor: pointer;
 }
 .secondaryButton {
-  width: 95px;
-  height: 25px;
+  /* width: 132px;
+  height: 30px;
   background-color: white;
   color: #317bdb;
-  border-radius: 3px;
+  border-radius: 5px;
   border: solid 1px #317bdb;
+  font-size: 15px; */
 }
 .secondaryButton:hover {
   cursor: pointer;
