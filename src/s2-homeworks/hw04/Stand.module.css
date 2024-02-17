@@ -14,13 +14,13 @@
   gap: 48px;
   background-color: #79baec;
 }
-.superInput {
+/* .superInput {
   display: inline-block;
   width: 372px;
   height: 36px;
   border: 1px solid rgb(209, 197, 197);
   border-radius: 5px;
-}
+} */
 
 .buttons {
   display: flex;
@@ -36,53 +36,7 @@
   gap: 36px;
   background-color: #dec0eb;
 }
-.defaultButton {
-  /* width: 132px;
-  height: 30px;
-  background-color: #317bdb;
-  color: white;
-  border-radius: 5px;
-  border: none;
-  font-size: 15px; */
-}
-.defaultButton:hover {
-  cursor: pointer;
-}
 
-.redButton {
-  /* width: 132px;
-  height: 30px;
-  background-color: red;
-  color: white;
-  border-radius: 5px;
-  border: none;
-  font-size: 15px; */
-}
-.redButton:hover {
-  cursor: pointer;
-}
-
-.disabledButton {
-  /* width: 132px;
-  height: 30px;
-  background-color: #8ab4ec;
-  color: white;
-  border-radius: 5px;
-  border: none;
-  font-size: 15px; */
-}
-.disabledButton:hover {
-  cursor: pointer;
-}
-.secondaryButton {
-  /* width: 132px;
-  height: 30px;
-  background-color: white;
-  color: #317bdb;
-  border-radius: 5px;
-  border: solid 1px #317bdb;
-  font-size: 15px; */
-}
-.secondaryButton:hover {
-  cursor: pointer;
-}
+/* .myOwnClass {
+  background-color: green;
+} */

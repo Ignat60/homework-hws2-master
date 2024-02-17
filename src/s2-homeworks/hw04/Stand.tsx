@@ -41,40 +41,28 @@ const Stand = () => {
         {/*обычная кнопка:*/}
         <div>
           <SuperButton
+            // className={s.myOwnClass}
             id={"hw4-super-button-default"}
-            // className={s.defaultButton}
+            xType={"default"}
           >
             default
           </SuperButton>
         </div>
         {/*красная кнопка:*/}
         <div>
-          <SuperButton
-            id={"hw4-super-button-red"}
-            xType={"red"}
-            // className={s.redButton}
-          >
-            danger
+          <SuperButton id={"hw4-super-button-red"} xType={"red"}>
+            red
           </SuperButton>
         </div>
         {/*задизэйбленная кнопка:*/}
         <div>
-          <SuperButton
-            id={"hw4-super-button-disabled"}
-            xType={"s.disabled"}
-            // className={s.disabledButton}
-            disabled
-          >
+          <SuperButton id={"hw4-super-button-disabled"} disabled>
             disabled
           </SuperButton>
         </div>
         {/*задизэйбленная кнопка:*/}
         <div>
-          <SuperButton
-            id={"hw4-super-button-secondary"}
-            xType={"secondary"}
-            // className={s.secondaryButton}
-          >
+          <SuperButton id={"hw4-super-button-secondary"} xType={"secondary"}>
             secondary
           </SuperButton>
         </div>
