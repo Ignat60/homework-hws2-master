@@ -8,7 +8,8 @@ const Stand = () => {
   const [stateForAllInputs, setValue] = useState<string>("");
   const [error, setError] = useState<string>("");
 
-  const [stateForAllCheckboxes, setChecked] = useState<boolean>(false);
+  const [checkboxesHomeTask, setCheckboxesHomeTask] = useState<boolean>(false);
+  const [checkboxesOld, setCheckboxesOld] = useState<boolean>(false);
 
   return (
     <div id={"hw4-stand"} className={s.stand}>
@@ -73,8 +74,9 @@ const Stand = () => {
         <div>
           <SuperCheckbox
             id={"hw4-super-checkbox-with-text"}
-            checked={stateForAllCheckboxes}
-            onChangeChecked={setChecked}
+            checked={checkboxesHomeTask}
+            // checked={true}
+            onChangeChecked={setCheckboxesHomeTask}
           >
             Hometask
           </SuperCheckbox>
@@ -83,8 +85,8 @@ const Stand = () => {
         <div>
           <SuperCheckbox
             id={"hw4-super-checkbox-like-old"}
-            checked={stateForAllCheckboxes}
-            onChangeChecked={setChecked}
+            checked={checkboxesOld}
+            onChangeChecked={setCheckboxesOld}
             // onChange={(e) => setChecked(e.currentTarget.checked)}
           />
         </div>
