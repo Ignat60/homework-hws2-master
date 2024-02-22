@@ -5,7 +5,9 @@ import SuperCheckbox from "./common/c3-SuperCheckbox/SuperCheckbox";
 import SuperButton from "./common/c2-SuperButton/SuperButton";
 
 const Stand = () => {
-  const [stateForAllInputs, setValue] = useState<string>("");
+  const [stateForInputs, setValueForInputs] = useState<string>("");
+  const [stateForErrorInputs, setValueForErrorInputs] = useState<string>("");
+
   const [error, setError] = useState<string>("");
 
   const [checkboxesHomeTask, setCheckboxesHomeTask] = useState<boolean>(false);
@@ -18,8 +20,8 @@ const Stand = () => {
         <div>
           <SuperInputText
             id={"hw4-super-input-like-old"}
-            value={stateForAllInputs}
-            onChange={(e) => setValue(e.currentTarget.value)}
+            value={stateForInputs}
+            onChange={(e) => setValueForInputs(e.currentTarget.value)}
             className={s.superInput}
           />
         </div>
@@ -27,12 +29,12 @@ const Stand = () => {
         <div>
           <SuperInputText
             id={"hw4-super-input-with-error"}
-            value={stateForAllInputs}
-            onChangeText={setValue}
+            value={stateForErrorInputs}
+            onChangeText={setValueForErrorInputs}
             error={error}
             onEnter={() => {
-              setError(stateForAllInputs.trim() ? "" : "Error");
-              setValue("");
+              setError(stateForErrorInputs.trim() ? "" : "Error");
+              setValueForErrorInputs("");
             }}
           />
         </div>
