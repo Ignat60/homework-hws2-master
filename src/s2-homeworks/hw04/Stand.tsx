@@ -7,9 +7,8 @@ import SuperButton from "./common/c2-SuperButton/SuperButton";
 const Stand = () => {
   const [stateForInputs, setValueForInputs] = useState<string>("");
   const [stateForErrorInputs, setValueForErrorInputs] = useState<string>("");
-
   const [error, setError] = useState<string>("");
-
+  console.log(error);
   const [checkboxesHomeTask, setCheckboxesHomeTask] = useState<boolean>(false);
   const [checkboxesOld, setCheckboxesOld] = useState<boolean>(false);
 
