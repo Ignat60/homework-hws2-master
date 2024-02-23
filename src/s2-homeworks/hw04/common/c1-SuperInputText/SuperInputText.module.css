@@ -1,5 +1,10 @@
+input {
+  outline: none;
+}
+
 .input:focus {
   background-color: #caaade;
+  border: 1px solid black;
 }
 
 .input {
@@ -16,7 +21,8 @@
 .superInput {
 }
 
-.errorInput {
+.errorInput,
+.input:focus.errorInput {
   border: red 2px solid;
 }
 

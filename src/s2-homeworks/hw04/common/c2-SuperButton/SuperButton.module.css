@@ -57,12 +57,14 @@
 .red:active {
   background-color: rgb(154, 110, 110);
 }
-
-.button:disabled {
+.disabled {
   cursor: pointer;
   background-color: #8ab4ec;
   color: white;
   border-radius: 5px;
   border: none;
   font-size: 15px;
+}
+.disabled:hover {
+  cursor: none;
 }

@@ -5,12 +5,12 @@ import SuperCheckbox from "./common/c3-SuperCheckbox/SuperCheckbox";
 import SuperButton from "./common/c2-SuperButton/SuperButton";
 
 const Stand = () => {
-  const [stateForInputs, setValueForInputs] = useState<string>("");
-  const [stateForErrorInputs, setValueForErrorInputs] = useState<string>("");
+  const [stateForAllInputs, setValueForAllInputs] = useState<string>("");
+  // const [stateForErrorInputs, setValueForErrorInputs] = useState<string>("");
+
   const [error, setError] = useState<string>("");
-  console.log(error);
   const [checkboxesHomeTask, setCheckboxesHomeTask] = useState<boolean>(false);
-  const [checkboxesOld, setCheckboxesOld] = useState<boolean>(false);
+  // const [checkboxesOld, setCheckboxesOld] = useState<boolean>(false);
 
   return (
     <div id={"hw4-stand"} className={s.stand}>
@@ -19,8 +19,8 @@ const Stand = () => {
         <div>
           <SuperInputText
             id={"hw4-super-input-like-old"}
-            value={stateForInputs}
-            onChange={(e) => setValueForInputs(e.currentTarget.value)}
+            value={stateForAllInputs}
+            onChange={(e) => setValueForAllInputs(e.currentTarget.value)}
             className={s.superInput}
           />
         </div>
@@ -28,12 +28,12 @@ const Stand = () => {
         <div>
           <SuperInputText
             id={"hw4-super-input-with-error"}
-            value={stateForErrorInputs}
-            onChangeText={setValueForErrorInputs}
+            value={stateForAllInputs}
+            onChangeText={setValueForAllInputs}
             error={error}
             onEnter={() => {
-              setError(stateForErrorInputs.trim() ? "" : "Error");
-              setValueForErrorInputs("");
+              setError(stateForAllInputs.trim() ? "" : "Error");
+              setValueForAllInputs("");
             }}
           />
         </div>
@@ -58,7 +58,7 @@ const Stand = () => {
         </div>
         {/*задизэйбленная кнопка:*/}
         <div>
-          <SuperButton id={"hw4-super-button-disabled"} disabled>
+          <SuperButton id={"hw4-super-button-disabled"} disabled={true}>
             disabled
           </SuperButton>
         </div>
@@ -86,8 +86,8 @@ const Stand = () => {
         <div>
           <SuperCheckbox
             id={"hw4-super-checkbox-like-old"}
-            checked={checkboxesOld}
-            onChangeChecked={setCheckboxesOld}
+            checked={checkboxesHomeTask}
+            onChangeChecked={setCheckboxesHomeTask}
             // onChange={(e) => setChecked(e.currentTarget.checked)}
           />
         </div>
