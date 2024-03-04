@@ -18,16 +18,18 @@ function Pages() {
       <Routes>
         {/*роутинг будут писать студенты*/}
         {/* в начале мы попадаем на страницу '/' и переходим сразу на страницу /pre-junior */}
-        <Route
+        {/* <Route
           path={"/"}
-          element={
-            <Navigate to={"/src/s2-homeworks/hw05/pages/PreJunior.tsx"} />
-          }
+          element={<Navigate to={"/homework-hws2-master#/JUNIOR_PLUS"} />}
+        /> */}
+        {/* роуты для /pre-junior, /junior, /junior-plus */}
+        <Route path={"/pre-junior"} element={<PreJunior />} />
+        <Route path={"/junior-plus"} element={<JuniorPlus />} />
+        <Route path={"/junior"} element={<Junior />} />
+        <Route
+          path={"/src/s2-homeworks/hw05/pages/Junior"}
+          element={<Junior />}
         />
-        {/*роуты для /pre-junior, /junior, /junior-plus*/}
-        {/*<Route ...*/}
-        {/*<Route ...*/}
-        {/*<Route ...*/}
         {/*роут для несуществующей страницы должен отрисовать <Error404 />*/}
         {/*<Route ...*/}
       </Routes>

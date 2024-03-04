@@ -2,7 +2,9 @@
 }
 
 .header {
+  background-color: #ecb6b6;
 }
 
 .header h1 {
+  color: red;
 }
