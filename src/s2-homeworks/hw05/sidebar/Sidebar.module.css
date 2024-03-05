@@ -1,5 +1,5 @@
 .sidebar {
-  background-color: #f4f8cf;
+  background-color: #f4f9ca;
 }
 
 .sidebar.open {
@@ -9,9 +9,12 @@
 }
 
 .nav {
+  display: flex;
+  flex-direction: column;
 }
 
 .nav a {
+  color: blue;
 }
 
 .nav a:hover {
