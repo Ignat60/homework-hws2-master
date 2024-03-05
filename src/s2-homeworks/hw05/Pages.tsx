@@ -23,7 +23,8 @@ function Pages() {
         <Route path={"/pre-junior"} element={<PreJunior />} />
         <Route path={"/junior-plus"} element={<JuniorPlus />} />
         <Route path={"/junior"} element={<Junior />} />
-        <Route path={"/*"} element={<Error404 />} />
+        <Route path={"/*"} element={<Navigate to={"/pageError404"} />} />
+        <Route path={"/pageError404"} element={<Error404 />} />
       </Routes>
     </div>
   );
