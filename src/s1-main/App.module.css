@@ -1,4 +1,6 @@
 .App {
+  display: flex;
+  flex-direction: column;
   --header_height: 60px;
 }
 

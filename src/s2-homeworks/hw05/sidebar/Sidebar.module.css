@@ -1,5 +1,7 @@
 .sidebar {
-  background-color: #f4f9ca;
+  width: 250px;
+  height: 100vh;
+  background-color: #caf9dd;
 }
 
 .sidebar.open {
@@ -14,13 +16,16 @@
 }
 
 .nav a {
-  color: blue;
+  text-decoration: none;
+  color: rgb(31, 48, 28);
 }
 
 .nav a:hover {
 }
 
 .nav a.active {
+  color: red;
+  font-weight: 500;
 }
 .close {
 }
