@@ -1,6 +1,7 @@
 .App {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
   --header_height: 60px;
 }
 
@@ -11,7 +12,7 @@
   height: 373px; */
   flex-shrink: 0;
   max-width: 1280px;
-  height: 720px;
+  /* min-height: 720px; */
   border: solid #06c 3px;
 
   /* display: flex;

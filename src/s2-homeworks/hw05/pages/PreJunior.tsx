@@ -10,8 +10,8 @@ function PreJunior() {
     <div id={"hw5-page-pre-junior"} className={s.color}>
       <h1>PreJunior</h1>
       {/*pre junior page*/}
-      {/* <HW1 /> */}
-      {/* <HW2 /> */}
+      <HW1 />
+      <HW2 />
       {/* <HW3 /> */}
       {/* <HW4 /> */}
     </div>

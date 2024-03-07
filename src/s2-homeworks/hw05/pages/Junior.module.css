@@ -1,6 +1,8 @@
 .color {
-  width: 250px;
-  height: 250px;
-  background-color: #e0899c;
+  width: 450px;
+  display: inline-block;
+  height: 450px;
+  background-color: #eb204c;
   color: #b88791;
+  flex-grow: 1;
 }

@@ -1,6 +1,12 @@
 .colors {
-  width: 250px;
-  height: 250px;
+  display: inline-block;
+  width: 300px;
+  /* flex-basis: 80%; */
+  height: 100vh;
+  flex-grow: 1;
   background-color: #81d1c6;
-  color: #04fddc;
+  color: #0429fd;
+  /* align-self: flex-end; */
+  /* display: flex; */
+  /* align-items: flex-end; */
 }
