@@ -1,8 +1,11 @@
 .App {
+  max-width: 1280px;
+  height: 100vh;
   display: flex;
-  flex-direction: row;
-  /* flex-wrap: wrap; */
+  margin: 0 auto;
+  flex-direction: column;
   --header_height: 60px;
+  border: solid rgb(204, 0, 51) 1px;
 }
 
 .hw {
@@ -11,9 +14,9 @@
   /* width: 1280px;
   height: 373px; */
   flex-shrink: 0;
-  max-width: 1280px;
+  /* max-width: 1280px; */
   /* min-height: 720px; */
-  border: solid #06c 3px;
+  border: solid rgb(204, 0, 51) 1px;
 
   /* display: flex;
   justify-content: space-between; */

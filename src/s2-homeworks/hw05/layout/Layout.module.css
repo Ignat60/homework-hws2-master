@@ -1,6 +1,6 @@
 .layoutwrapper {
   width: 100%;
-  background-color: aqua;
+  background-color: rgb(197, 189, 230);
 }
 .content {
   display: flex;
@@ -8,5 +8,6 @@
 .layout {
   /* min-width: 1000px; */
   width: 100%;
-  background-color: #00ff1e;
+  /* background-color: #00ff1e; */
 }
+0

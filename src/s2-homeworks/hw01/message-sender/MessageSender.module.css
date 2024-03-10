@@ -6,13 +6,12 @@
 }
 
 .textarea {
-  width: 976px;
+  width: 776px;
   min-height: 40px;
   flex-shrink: 0;
   resize: none;
   border: 3px solid #06c;
   border-radius: 20px;
-
   /* vertical-align: middle; */
   /* text-align: center; */
 }
