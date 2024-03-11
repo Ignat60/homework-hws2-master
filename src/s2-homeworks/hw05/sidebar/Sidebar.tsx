@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import s from "./Sidebar.module.css";
 import { PATH } from "../Pages";
 import closeIcon from "./closeOutline.svg";
+import zIndex from "@mui/material/styles/zIndex";
 
 type PropsType = {
   open: boolean;
@@ -11,6 +12,7 @@ type PropsType = {
 
 export const Sidebar: FC<PropsType> = ({ open, handleClose }) => {
   const sidebarClass = s.sidebar + (open ? " " + s.open : "");
+
   return (
     <>
       {/*затемнение справа от открытого меню*/}
