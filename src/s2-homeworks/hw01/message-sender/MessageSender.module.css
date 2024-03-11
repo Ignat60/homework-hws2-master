@@ -1,7 +1,6 @@
 .sendForm {
   display: flex;
   justify-content: space-between;
-
   padding: 10px;
 }
 
@@ -12,8 +11,6 @@
   resize: none;
   border: 3px solid #06c;
   border-radius: 20px;
-  /* vertical-align: middle; */
-  /* text-align: center; */
 }
 
 .button {

@@ -7,7 +7,7 @@
 
   display: flex;
   align-items: center;
-  background-color: #ecb6b6;
+  background-color: #efdddd;
   /* order: -1; */
   justify-content: space-between;
   padding: 0 15px 0 15px;
@@ -15,5 +15,5 @@
 
 .header h1 {
   display: inline-block;
-  color: rgb(122, 65, 65);
+  color: rgb(227, 152, 152);
 }

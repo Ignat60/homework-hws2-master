@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import s from "./Sidebar.module.css";
 import { PATH } from "../Pages";
 import closeIcon from "./closeOutline.svg";
-import zIndex from "@mui/material/styles/zIndex";
 
 type PropsType = {
   open: boolean;

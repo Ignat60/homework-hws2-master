@@ -10,8 +10,6 @@
 .hw {
   margin: 0 auto;
   padding: 15px;
-  /* width: 1280px;
-  height: 373px; */
   flex-shrink: 0;
   /* border: solid rgb(204, 0, 51) 1px; */
 }

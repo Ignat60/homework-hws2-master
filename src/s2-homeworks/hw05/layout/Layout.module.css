@@ -6,7 +6,5 @@
   display: flex;
 }
 .layout {
-  /* min-width: 1000px; */
   width: 100%;
-  /* background-color: #00ff1e; */
 }

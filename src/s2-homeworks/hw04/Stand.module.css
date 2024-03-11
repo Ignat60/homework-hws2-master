@@ -14,13 +14,6 @@
   gap: 48px;
   background-color: #79baec;
 }
-/* .superInput {
-  display: inline-block;
-  width: 372px;
-  height: 36px;
-  border: 1px solid rgb(209, 197, 197);
-  border-radius: 5px;
-} */
 
 .buttons {
   display: flex;
@@ -36,7 +29,3 @@
   gap: 36px;
   background-color: #dec0eb;
 }
-
-/* .myOwnClass {
-  background-color: green;
-} */

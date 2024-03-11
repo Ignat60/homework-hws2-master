@@ -3,7 +3,6 @@
   left: 50px;
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-start; */
   align-items: flex-start;
   right: 20px;
 }
@@ -16,8 +15,6 @@
   width: 48px;
   height: 48px;
   flex-shrink: 0;
-  /* width: 48px;
-  height: 48px; */
 }
 
 .friendText {
@@ -47,12 +44,6 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  /* color: #000;
-  font-family: Montserrat;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal; */
 }
 
 .friendTime {
