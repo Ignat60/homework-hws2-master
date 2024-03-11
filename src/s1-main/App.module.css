@@ -1,11 +1,10 @@
 .App {
-  max-width: 1280px;
   height: 100vh;
   display: flex;
   margin: 0 auto;
   flex-direction: column;
   --header_height: 60px;
-  border: solid rgb(204, 0, 51) 1px;
+  /* border: solid rgb(204, 0, 51) 5px; */
 }
 
 .hw {
@@ -14,12 +13,7 @@
   /* width: 1280px;
   height: 373px; */
   flex-shrink: 0;
-  /* max-width: 1280px; */
-  /* min-height: 720px; */
-  border: solid rgb(204, 0, 51) 1px;
-
-  /* display: flex;
-  justify-content: space-between; */
+  /* border: solid rgb(204, 0, 51) 1px; */
 }
 
 .hwTitle {
@@ -31,7 +25,3 @@
   font-weight: 600;
   line-height: normal;
 }
-/* .hw div {
-  display: inline-block;
-
-} */
