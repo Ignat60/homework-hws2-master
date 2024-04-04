@@ -3,6 +3,7 @@ import React, {
   DetailedHTMLProps,
   InputHTMLAttributes,
   KeyboardEvent,
+  FocusEvent,
   ReactNode,
 } from "react";
 import s from "./SuperInputText.module.css";
@@ -49,6 +50,12 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = ({
       e.key === "Enter" && // и если нажата кнопка Enter
       onEnter(); // то вызвать его
   };
+  const onBlurCallbackHandler = (e: FocusEvent<HTMLInputElement, Element>) => {
+    console.log("test");
+    // restProps.onBlur()
+    restProps && restProps.onBlur?.(e);
+  };
+
   const finalSpanClassName =
     s.error + (spanClassName ? " " + spanClassName : "");
 
@@ -60,13 +67,15 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = ({
   return (
     <div className={s.inputWrapper}>
       <input
+        autoFocus
+        onBlur={onBlurCallbackHandler}
         id={id}
         type={"text"}
         onClick={onClick}
         onChange={onChangeCallback}
         onKeyPress={onKeyPressCallback}
         className={finalInputClassName}
-        value={restProps.value} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
+        value={restProps.value} // отдаём onEnterинпуту остальные пропсы если они есть (value например там внутри)
       />
       <span id={id ? id + "-span" : undefined} className={finalSpanClassName}>
         {error}
