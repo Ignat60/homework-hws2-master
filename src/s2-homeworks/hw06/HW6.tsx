@@ -19,6 +19,8 @@ export const HW6 = () => {
   };
   const restore = () => {
     // делают студенты
+    const returnedLsValue = restoreState("hw6-editable-span-value", "");
+    setValue(returnedLsValue);
   };
 
   return (
