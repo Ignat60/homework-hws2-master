@@ -45,7 +45,7 @@ export const HW6 = () => {
         </div>
 
         <div className={s.buttonsContainer}>
-          <SuperButton id={"hw6-save"} onClick={save}>
+          <SuperButton id={"hw6-save"} onClick={save} xType={"default"}>
             Save to ls
           </SuperButton>
           <SuperButton id={"hw6-restore"} onClick={restore} xType={"secondary"}>

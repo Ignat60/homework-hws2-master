@@ -1,8 +1,8 @@
 .color {
-  width: 450px;
+  /* width: 450px; */
   display: inline-block;
-  height: 450px;
-  background-color: #a4b9a2;
+  height: 100vh;
+  background-color: #ececec;
   color: #b88791;
   flex-grow: 1;
 }

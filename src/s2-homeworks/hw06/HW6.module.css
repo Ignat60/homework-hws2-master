@@ -1,5 +1,13 @@
 .buttonsContainer {
+  padding-top: 20px;
 }
 
 .editableSpanContainer {
+}
+
+button {
+  /* background-color: rgba(0, 102, 204, 0.684); */
+}
+span {
+  color: #317bdb;
 }

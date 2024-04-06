@@ -1,10 +1,12 @@
 .App {
   height: 100vh;
+  width: 1440px;
   display: flex;
   margin: 0 auto;
   flex-direction: column;
   --header_height: 60px;
-  /* border: solid rgb(204, 0, 51) 5px; */
+  border: solid rgb(204, 0, 51) 1px;
+  /* background-color: #884646; */
 }
 
 .hw {
@@ -15,7 +17,8 @@
 }
 
 .hwTitle {
-  margin-left: 350px;
+  margin-top: 30px;
+  margin-left: 150px;
   color: #000;
   font-family: Montserrat;
   font-size: 22px;

@@ -9,7 +9,7 @@ import HW6 from "../../hw06/HW6";
 function Junior() {
   return (
     <div id={"hw5-page-junior"} className={s.color}>
-      <h1>Junior</h1>
+      {/* <h1>Junior</h1> */}
       <HW6 />
       {/*<HW7 />*/}
       {/*<HW8 />*/}
