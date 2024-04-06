@@ -14,12 +14,15 @@ import s from "./HW6.module.css";
 export const HW6 = () => {
   const [value, setValue] = useState<string>("");
 
+  const kye = "hw6-editable-span-value";
+
   const save = () => {
-    saveState<string>("hw6-editable-span-value", value);
+    saveState<string>(kye, value);
   };
+
   const restore = () => {
     // делают студенты
-    const returnedLsValue = restoreState("hw6-editable-span-value", "");
+    const returnedLsValue = restoreState(kye, "localStorage is empty");
     setValue(returnedLsValue);
   };
 
