@@ -17,7 +17,7 @@ type SuperCheckboxPropsType = Omit<DefaultInputPropsType, "type"> & {
 };
 
 const SuperCheckbox: React.FC<SuperCheckboxPropsType> = ({
-  // onChange,
+  // onChange,   :когда раскоментировал - тоже работает, был сохранен так
   onChangeChecked,
   className,
   spanClassName,
