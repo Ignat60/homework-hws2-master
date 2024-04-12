@@ -1,15 +1,30 @@
+span {
+  display: flex;
+  color: black;
+  margin-left: 15px;
+  margin-top: 10px;
+  /* background-color: #000000; */
+}
+
 .radio {
+  cursor: pointer;
+  /* color: black; */
+  /* background-color: #000000; */
 }
 
 .radio::before {
 }
 
-
 .radio:checked::before {
 }
 
 .label {
+  display: flex;
 }
 
 .options {
+  input[type="radio"] {
+    accent-color: black;
+    /* padding: 10px; */
+  }
 }

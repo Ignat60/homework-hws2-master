@@ -4,6 +4,7 @@ import React, {
   ChangeEvent,
 } from "react";
 import s from "./SuperSelect.module.css";
+// import chevron-down from "./chevron-down.svg";
 
 type DefaultSelectPropsType = DetailedHTMLProps<
   SelectHTMLAttributes<HTMLSelectElement>,
@@ -52,6 +53,9 @@ const SuperSelect: React.FC<SuperSelectPropsType> = ({
       value={Number(restProps.value)}
     >
       {mappedOptions}
+      <div>
+        {/* <img src={chevron-down} className={s.pen} alt={"edit"} /> */}
+      </div>
     </select>
   );
 };
