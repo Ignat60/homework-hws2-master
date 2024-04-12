@@ -20,6 +20,11 @@ const arr = [
 const HW7 = () => {
   const [value, onChangeOption] = useState<number>(1); // селект и радио должны работать синхронно
 
+  function onChangeOptionHandler(newValue: number): void {
+    debugger;
+    onChangeOption(newValue);
+  }
+
   return (
     <div id={"hw7"}>
       <div className={s2.hwTitle}>Homework #7</div>
@@ -32,7 +37,7 @@ const HW7 = () => {
               id={"hw7-super-select"}
               options={arr}
               value={value}
-              onChangeOption={onChangeOption}
+              onChangeOption={onChangeOptionHandler}
             />
           </div>
           <div>
@@ -41,7 +46,7 @@ const HW7 = () => {
               name={"hw7-radio"}
               options={arr}
               value={value}
-              onChangeOption={onChangeOption}
+              onChangeOption={onChangeOptionHandler}
             />
           </div>
         </div>
