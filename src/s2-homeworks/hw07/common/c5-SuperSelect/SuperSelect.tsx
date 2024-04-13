@@ -23,6 +23,7 @@ const SuperSelect: React.FC<SuperSelectPropsType> = ({
   onChangeOption,
   ...restProps
 }) => {
+  // debugger;
   const mappedOptions: any[] = options
     ? options.map((o) => (
         <option
@@ -35,7 +36,6 @@ const SuperSelect: React.FC<SuperSelectPropsType> = ({
         </option>
       ))
     : []; // map options with key
-
   const onChangeCallback = (e: ChangeEvent<HTMLSelectElement>) => {
     if (onChangeOption) onChangeOption(Number(e.currentTarget.value));
 
@@ -48,9 +48,10 @@ const SuperSelect: React.FC<SuperSelectPropsType> = ({
     <select
       className={finalSelectClassName}
       onChange={onChangeCallback}
-      // можно через ...restProps работает, так и было в задании
-      // {...restProps}
-      value={Number(restProps.value)}
+      {...restProps}
+
+      // так работает но не проходит тест, в restProps находится id={"hw7-super-select"}
+      // value={Number(restProps.value)}
     >
       {mappedOptions}
       <div>
