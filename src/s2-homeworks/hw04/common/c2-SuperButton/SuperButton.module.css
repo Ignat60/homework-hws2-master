@@ -2,7 +2,9 @@
   width: 162px;
   height: 30px;
 }
-
+.button + .button {
+  margin-left: 15px;
+}
 .secondary {
   background-color: white;
   color: #317bdb;

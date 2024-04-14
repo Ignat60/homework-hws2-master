@@ -4,6 +4,7 @@ import React, {
   InputHTMLAttributes,
 } from "react";
 import s from "./SuperCheckbox.module.css";
+// import checked from "./checked.svg"
 
 // тип пропсов обычного инпута
 type DefaultInputPropsType = DetailedHTMLProps<

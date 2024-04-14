@@ -4,7 +4,6 @@ import React, {
   ChangeEvent,
 } from "react";
 import s from "./SuperSelect.module.css";
-// import chevron-down from "./chevron-down.svg";
 
 type DefaultSelectPropsType = DetailedHTMLProps<
   SelectHTMLAttributes<HTMLSelectElement>,
@@ -45,19 +44,18 @@ const SuperSelect: React.FC<SuperSelectPropsType> = ({
   const finalSelectClassName = s.select + (className ? " " + className : "");
 
   return (
-    <select
-      className={finalSelectClassName}
-      onChange={onChangeCallback}
-      {...restProps}
+    <>
+      <select
+        className={finalSelectClassName}
+        onChange={onChangeCallback}
+        {...restProps}
 
-      // так работает но не проходит тест, в restProps находится id={"hw7-super-select"}
-      // value={Number(restProps.value)}
-    >
-      {mappedOptions}
-      <div>
-        {/* <img src={chevron-down} className={s.pen} alt={"edit"} /> */}
-      </div>
-    </select>
+        // так работает но не проходит тест, в restProps находится id={"hw7-super-select"}
+        // value={Number(restProps.value)}
+      >
+        {mappedOptions}
+      </select>
+    </>
   );
 };
 
