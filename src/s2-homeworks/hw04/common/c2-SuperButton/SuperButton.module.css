@@ -1,6 +1,7 @@
 .button {
-  width: 162px;
+  min-width: 50px;
   height: 30px;
+  padding: 0 10px;
 }
 .button + .button {
   margin-left: 15px;
@@ -17,7 +18,8 @@
   background-color: #247bed;
   color: white;
   border-radius: 5px;
-  border: none;
+  /* border: none; */
+  border: 1px solid #abbeff;
   font-size: 15px;
 }
 
@@ -25,27 +27,28 @@
   background-color: rgb(254, 38, 38);
   color: white;
   border-radius: 5px;
-  border: none;
+  /* border: none; */
+  border: 1px solid #ff2802;
   font-size: 15px;
 }
 
 .default:hover {
   cursor: pointer;
-  height: 33px;
-  border: 3px solid #0270ff;
+  height: 30px;
+  border: 1px solid #0270ff;
 }
 
 .red:hover {
   cursor: pointer;
-  height: 33px;
-  border: 3px solid red;
+  height: 30px;
+  border: 1px solid red;
 }
 
 .secondary:hover {
   cursor: pointer;
-  height: 33px;
+  height: 30px;
   background-color: rgb(195, 201, 240);
-  border: solid 3px #0a6ff3;
+  border: solid 1px #0a6ff3;
 }
 
 .default:active {
