@@ -7,50 +7,53 @@ function Clock() {
   const [timerId, setTimerId] = useState<NodeJS.Timeout | number | undefined>(
     undefined
   );
+  // console.log("timerId : ", timerId);
+
   // for autotests // не менять // можно подсунуть в локалСторэдж нужную дату, чтоб увидеть как она отображается
 
   const [date, setDate] = useState<Date>(
     new Date(restoreState("hw9-date", Date.now()))
   );
+  // console.log("Test data:", date);
   const [show, setShow] = useState<boolean>(false);
+  const [btnDis, setBtnDis] = useState<boolean>(true);
 
-  let firstTimer: NodeJS.Timeout;
-  let secondTimer: NodeJS.Timeout;
   const func = (f: number) => {
-    console.log(f);
+    // console.log(f);
   };
+  let i = 0;
   const start = () => {
-    // console.log("Test START");
-    //  let timer = setTimeout(function run() {
-    //     setTimeout(run, 1000);
-    //   }, 1000);
-    //   setDate(date.getSeconds() + 1);
-    let i = 1;
-    firstTimer = setTimeout(function run() {
+    let timerId = setInterval(() => {
       func(++i);
-      secondTimer = setTimeout(run, 1000);
+
+      setDate(new Date(restoreState("hw9-date", Date.now())));
+      // console.log(i);
     }, 1000);
-    // setTimerId(timer);
+
+    // console.log("timerId :", timerId);
+    setTimerId(timerId);
+    setBtnDis(!btnDis);
 
     // пишут студенты // запустить часы (должно отображаться реальное время, а не +1)
     // сохранить ид таймера (https://learn.javascript.ru/settimeout-setinterval#setinterval)
   };
 
   const stop = () => {
-    console.log("Test STOP");
-    clearTimeout(firstTimer);
-    clearTimeout(secondTimer);
+    clearTimeout(timerId);
+    // console.log("Test STOP:", timerId);
+    setBtnDis(!btnDis);
     // пишут студенты // поставить часы на паузу, обнулить ид таймера (timerId <- undefined)
   };
 
   const onMouseEnter = () => {
+    // console.log("HUUUUU");
     setShow(true);
 
     // пишут студенты // показать дату если наведена мышка
   };
   const onMouseLeave = () => {
     setShow(false);
-    console.log("Yoooo");
+    // console.log("Yoooo");
     // пишут студенты // спрятать дату если мышка не наведена
   };
 
@@ -67,20 +70,16 @@ function Clock() {
 
   // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
 
-  let formatterDay = new Intl.DateTimeFormat("ru", {
+  let formatterDay = new Intl.DateTimeFormat("en", {
     weekday: "long",
   });
   const stringDay: any = formatterDay.format(date) || <br />; // пишут студенты
-  // formatter.format(stringDay);
 
-  // let formatterDay = new Intl.DateTimeFormat("ru", {
-  //   weekday: "long",
-  // });
-  const stringMonth: any = formatterDay.format(date.getMonth()) || <br />; // пишут студенты
-  // formatter = new Intl.DateTimeFormat("ru", {
-  //   month: "long",
-  // });
-  // formatter.format(stringDay);
+  let formatterMonth = new Intl.DateTimeFormat("en", {
+    month: "long",
+  });
+  const stringMonth: any = formatterMonth.format(date) || <br />; // пишут студенты
+
   return (
     <div className={s.clock}>
       <div
@@ -112,15 +111,17 @@ function Clock() {
 
       <div className={s.buttonsContainer}>
         <SuperButton
+          xType={"default"}
           id={"hw9-button-start"}
-          disabled={false} // пишут студенты // задизэйблить если таймер запущен
+          disabled={!btnDis} // пишут студенты // задизэйблить если таймер запущен
           onClick={start}
         >
           start
         </SuperButton>
         <SuperButton
+          xType={"default"}
           id={"hw9-button-stop"}
-          disabled={false} // пишут студенты // задизэйблить если таймер не запущен
+          disabled={btnDis} // пишут студенты // задизэйблить если таймер не запущен
           onClick={stop}
         >
           stop
