@@ -14,7 +14,8 @@ function Clock() {
   const [date, setDate] = useState<Date>(
     new Date(restoreState("hw9-date", Date.now()))
   );
-  // console.log("Test data:", date);
+  console.log("Test data:", date);
+
   const [show, setShow] = useState<boolean>(false);
   const [btnDis, setBtnDis] = useState<boolean>(true);
 
@@ -40,7 +41,7 @@ function Clock() {
 
   const stop = () => {
     clearTimeout(timerId);
-    // console.log("Test STOP:", timerId);
+    console.log("Test STOP:", timerId);
     setBtnDis(!btnDis);
     // пишут студенты // поставить часы на паузу, обнулить ид таймера (timerId <- undefined)
   };
@@ -61,10 +62,17 @@ function Clock() {
     ":" +
     date.getMinutes() +
     ":" +
-    date.getSeconds() || <br />; // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
-  const stringDate = date.getDate() +
+    date.getSeconds() || <br />;
+
+  // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
+
+  const formatDate = (date: number): string => {
+    return date < 10 ? `0${date}` : `${date}`;
+  };
+
+  const stringDate = formatDate(date.getDate()) +
     "." +
-    date.getMonth() +
+    formatDate(date.getMonth() + 1) +
     "." +
     date.getFullYear() || <br />; // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
 
@@ -78,6 +86,7 @@ function Clock() {
   let formatterMonth = new Intl.DateTimeFormat("en", {
     month: "long",
   });
+
   const stringMonth: any = formatterMonth.format(date) || <br />; // пишут студенты
 
   return (
