@@ -14,7 +14,7 @@ function Clock() {
   const [date, setDate] = useState<Date>(
     new Date(restoreState("hw9-date", Date.now()))
   );
-  console.log("Test data:", date);
+  // console.log("Test data:", date);
 
   const [show, setShow] = useState<boolean>(false);
   const [btnDis, setBtnDis] = useState<boolean>(true);
@@ -41,7 +41,7 @@ function Clock() {
 
   const stop = () => {
     clearTimeout(timerId);
-    console.log("Test STOP:", timerId);
+    // console.log("Test STOP:", timerId);
     setBtnDis(!btnDis);
     // пишут студенты // поставить часы на паузу, обнулить ид таймера (timerId <- undefined)
   };
@@ -141,7 +141,3 @@ function Clock() {
 }
 
 export default Clock;
-
-//-------------------
-// let now = new Date();
-// alert(now.getDate() + "-" + now.getMonth() + "-" + now.getFullYear());

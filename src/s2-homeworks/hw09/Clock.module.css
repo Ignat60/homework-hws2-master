@@ -14,7 +14,7 @@
 .watch {
   display: inline-block;
 }
-.watch:hover .more {
+.watch:hover.more {
   background-color: #f5f1ac;
 }
 
