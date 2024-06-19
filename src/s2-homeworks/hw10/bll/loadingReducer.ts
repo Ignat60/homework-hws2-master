@@ -15,7 +15,10 @@ export const loadingReducer = (
     // пишет студент  // need to fix
 
     case "CHANGE_LOADING": {
-      return {};
+      return {
+        ...state,
+        isLoading: action.isLoading,
+      };
     }
 
     default:
