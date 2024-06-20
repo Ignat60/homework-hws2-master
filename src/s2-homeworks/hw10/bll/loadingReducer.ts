@@ -1,14 +1,6 @@
-const initState = true;
-//  = {
-//   isLoading: false,
-//   //   blabla: "Victor",
-// };
+const initState = false;
 
 export type LoadingType = boolean;
-//  = {
-//   isLoading: boolean;
-//   //   blabla: string;
-// };
 
 export const loadingReducer = (
   state: LoadingType = initState,
@@ -22,7 +14,6 @@ export const loadingReducer = (
       state = action.isLoading;
       return state;
     }
-
     default:
       return state;
   }
@@ -32,7 +23,6 @@ export const loadingReducer = (
 //     type: 'CHANGE_LOADING'
 //     isLoading: boolean
 // }
-
 type LoadingReducerActionType = LoadingActionType;
 type LoadingActionType = ReturnType<typeof loadingAC>;
 
