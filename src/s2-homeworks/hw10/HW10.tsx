@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { AppStoreType } from "./bll/store";
-import { loadingAC } from "./bll/loadingReducer";
+import { AppStoreType, useAppDispatch, useAppSelector } from "./bll/store";
+import { LoadingType, loadingAC } from "./bll/loadingReducer";
 import SuperButton from "../hw04/common/c2-SuperButton/SuperButton";
 import s2 from "../../s1-main/App.module.css";
 import { Loader } from "./Loader";
@@ -15,10 +15,13 @@ import { Loader } from "./Loader";
 
 const HW10 = () => {
   // useSelector, useDispatch // пишет студент
+  const dispatch = useAppDispatch();
+  const isLoading = useAppSelector<LoadingType>((state) => state.loading);
 
-  const isLoading = false;
+  //   const isLoading = false;
 
   const setLoading = () => {
+    dispatch(loadingAC(true));
     // пишет студент // показать крутилку на 1,5 секунд
     // dispatch
     // setTimeout
@@ -44,3 +47,6 @@ const HW10 = () => {
 };
 
 export default HW10;
+function dispatch() {
+  throw new Error("Function not implemented.");
+}

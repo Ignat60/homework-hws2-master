@@ -1,20 +1,16 @@
 import { loadingReducer } from "./loadingReducer";
-import {
-  AnyAction,
-  applyMiddleware,
-  combineReducers,
-  legacy_createStore,
-} from "redux";
+import { AnyAction, combineReducers, legacy_createStore } from "redux";
 import { themeReducer } from "../../hw12/bll/themeReducer";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
-import { ThunkDispatch, thunk } from "redux-thunk";
+import { ThunkDispatch } from "redux-thunk";
 
 const reducers = combineReducers({
+  //   isLoading: loadingReducer, // hw10
   loading: loadingReducer, // hw10
   theme: themeReducer, // hw12
 });
 
-const store = legacy_createStore(reducers, applyMiddleware(thunk));
+const store = legacy_createStore(reducers);
 
 export default store;
 type AppDispatchType = ThunkDispatch<AppStoreType, unknown, AnyAction>;
