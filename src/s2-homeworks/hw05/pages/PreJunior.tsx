@@ -8,7 +8,7 @@ import s from "./PreJunior.module.css";
 function PreJunior() {
   return (
     <div id={"hw5-page-pre-junior"} className={s.color}>
-      <h1>PreJunior</h1>
+      {/* <h1>PreJunior</h1> */}
       {/*pre junior page*/}
       <HW1 />
       <HW2 />

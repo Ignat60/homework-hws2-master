@@ -10,7 +10,7 @@ import s from "./JuniorPlus.module.css";
 function JuniorPlus() {
   return (
     <div id={"hw5-page-junior-plus"} className={s.colors}>
-      <h1>JuniorPlus</h1>
+      {/* <h1>JuniorPlus</h1> */}
       <HW10 />
       {/*<HW11 />*/}
       {/*<HW12 />*/}
