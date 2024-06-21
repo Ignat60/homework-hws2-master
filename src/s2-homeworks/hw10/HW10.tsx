@@ -1,7 +1,7 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { AppStoreType, useAppDispatch, useAppSelector } from "./bll/store";
-import { LoadingType, loadingAC } from "./bll/loadingReducer";
+// import { useDispatch, useSelector } from "react-redux";
+import { useAppDispatch, useAppSelector } from "./bll/store";
+import { loadingAC } from "./bll/loadingReducer";
 import SuperButton from "../hw04/common/c2-SuperButton/SuperButton";
 import s2 from "../../s1-main/App.module.css";
 import { Loader } from "./Loader";
@@ -16,9 +16,9 @@ import s from "./HW10.module.css";
 const HW10 = () => {
   // useSelector, useDispatch // пишет студент
   const dispatch = useAppDispatch();
-  const isLoading = useAppSelector<LoadingType>((state) => state.loading);
+  const isLoading = useAppSelector<boolean>((state) => state.loading.isLoading);
 
-  //   const isLoading = false;
+  // const isLoading = false;
 
   const setLoading = () => {
     dispatch(loadingAC(true));
