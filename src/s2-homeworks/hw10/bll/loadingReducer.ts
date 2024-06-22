@@ -2,7 +2,10 @@ const initState = {
   isLoading: false,
 };
 
-type InitialStateType = typeof initState;
+// type InitialStateType = typeof initState;
+type InitialStateType = {
+  isLoading: boolean;
+};
 
 export const loadingReducer = (
   state: InitialStateType = initState,
