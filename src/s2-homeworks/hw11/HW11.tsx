@@ -33,8 +33,6 @@ function HW11() {
       setValue1(value);
     }
 
-    // debugger;
-    // setValue2(value);
     // пишет студент // если пришёл массив - сохранить значения в оба useState, иначе в первый
   };
 

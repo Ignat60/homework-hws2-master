@@ -6,6 +6,7 @@ import HW11 from "../../hw11/HW11";
 // import HW14 from '../../hw14/HW14'
 // import HW15 from '../../hw15/HW15'
 import s from "./JuniorPlus.module.css";
+import HW12 from "../../hw12/HW12";
 
 function JuniorPlus() {
   return (
@@ -13,7 +14,7 @@ function JuniorPlus() {
       {/* <h1>JuniorPlus</h1> */}
       <HW10 />
       <HW11 />
-      {/*<HW12 />*/}
+      <HW12 />
       {/*<HW13 />*/}
       {/*<HW14 />*/}
       {/*<HW15 />*/}

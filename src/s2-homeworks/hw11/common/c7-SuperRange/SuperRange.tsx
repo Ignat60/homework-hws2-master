@@ -7,8 +7,6 @@ type SliderPropsType = {
 
 const SuperRange: React.FC<SliderPropsType> = (props) => {
   const handleChange = (e: any) => {
-    // debugger;
-    // console.log(e.target.value);s
     props.change(e.target.value);
   };
 
