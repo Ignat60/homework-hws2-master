@@ -3,8 +3,10 @@ import s from "./HW12.module.css";
 import s2 from "../../s1-main/App.module.css";
 import SuperSelect from "../hw07/common/c5-SuperSelect/SuperSelect";
 import { useDispatch, useSelector } from "react-redux";
-import { changeThemeId, InitStateType } from "./bll/themeReducer";
-import { AppRootstate } from "./bll/store";
+import { changeThemeId } from "./bll/themeReducer";
+
+import { colors } from "@mui/material";
+import { AppStoreType } from "../hw10/bll/store";
 
 /*
  * 1 - в файле themeReducer.ts написать нужные типы вместо any, дописать редьюсер
@@ -22,14 +24,18 @@ const themes = [
 const HW12 = () => {
   // взять ид темы из редакса
 
-  const themeId = useSelector<AppRootstate, InitStateType>(
-    (state) => state.themeId
-  );
+  const themeId = useSelector<AppStoreType>((state) => state.theme.themeId);
+  const dispatch = useDispatch();
   console.log(themeId);
-  const change = (id: any) => {
-    // дописать функцию
-  };
 
+  const change = (id: number) => {
+    // дописать функцию
+    dispatch(changeThemeId(id));
+  };
+  // let id = 3;
+  // useEffect(() => {
+  //   dispatch(changeThemeId(id));
+  // }, []);
   useEffect(() => {
     document.documentElement.dataset.theme = themeId + "";
   }, [themeId]);
@@ -38,12 +44,18 @@ const HW12 = () => {
     <div id={"hw12"}>
       <div id={"hw12-text"} className={s2.hwTitle}>
         Homework #12
+        <div style={{ color: "red" }}>{`themeId:  ${themeId}`}</div>
       </div>
 
       <div className={s2.hw}>
         <SuperSelect
           id={"hw12-select-theme"}
           className={s.select}
+          options={[
+            { id: 1, value: "Dark" },
+            { id: 2, value: "Light" },
+          ]}
+          onChangeOption={change}
           // сделать переключение тем
         />
       </div>

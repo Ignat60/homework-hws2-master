@@ -12,6 +12,8 @@ export const themeReducer = (
   // fix any
   switch (action.type) {
     case "SET_THEME_ID":
+      console.log(action.id);
+      // debugger;
       return {
         ...state,
         themeId: action.id,
