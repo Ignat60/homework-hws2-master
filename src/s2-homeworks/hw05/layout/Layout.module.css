@@ -1,6 +1,6 @@
 .layoutwrapper {
   width: 100%;
-  background-color: rgb(197, 189, 230);
+  /* background-color: rgb(197, 189, 230); */
 }
 .content {
   display: flex;

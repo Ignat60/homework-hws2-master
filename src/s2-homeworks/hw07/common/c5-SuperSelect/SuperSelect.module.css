@@ -1,10 +1,19 @@
 .select {
   display: inline-block;
-  width: 120px;
+  width: 150px;
+  height: 25px;
   cursor: pointer;
+  margin-left: 132px;
+  font-size: 15px;
+  font-weight: 400;
 }
 
 .select:focus {
+  /* background-color: #e4e4e4a9; */
+}
+.select:hover {
+  border: solid #0429fd 1px;
+  border-radius: 5px;
 }
 
 .option:hover {

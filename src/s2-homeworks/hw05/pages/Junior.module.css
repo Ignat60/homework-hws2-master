@@ -2,7 +2,7 @@
   /* width: 450px; */
   display: inline-block;
   height: 100vh;
-  background-color: #ececec;
+  /* background-color: #ececec; */
   color: #b88791;
   flex-grow: 1;
 }
