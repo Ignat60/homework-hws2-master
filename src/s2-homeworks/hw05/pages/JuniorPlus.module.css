@@ -2,7 +2,7 @@
   display: inline-block;
   width: 300px;
   /* flex-basis: 80%; */
-  height: 100vh;
+  min-height: 100vh;
   flex-grow: 1;
   /* background-color: #ececec; */
   /* color: #0429fd; */
