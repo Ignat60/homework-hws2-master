@@ -62,7 +62,7 @@ const HW13 = () => {
             setText(
               "Sorry, some error occurred. Please, try a little bit later"
             );
-            setInfo("");
+            setInfo("unKnownError");
           }
         }
       });
