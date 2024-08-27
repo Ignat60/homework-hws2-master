@@ -51,7 +51,7 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = ({
       onEnter(); // то вызвать его
   };
   const onBlurCallbackHandler = (e: FocusEvent<HTMLInputElement, Element>) => {
-    console.log("test");
+    // console.log("test");
     // restProps.onBlur()
     restProps && restProps.onBlur?.(e);
   };

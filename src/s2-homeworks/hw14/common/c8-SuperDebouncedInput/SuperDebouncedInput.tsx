@@ -38,34 +38,28 @@ const SuperDebouncedInput: React.FC<SuperDebouncedInputPropsType> = ({
   const [timerId, setTimerId] = useState<number | undefined>(undefined);
 
   const onChangeTextCallback = (value: string) => {
+    console.log("start");
     onChangeText?.(value);
+    debugger;
 
     if (onDebouncedChange) {
-      let timerId = setTimeout(() => {
-        onChangeTextCallback(value);
+      setTimeout(() => {
+        console.log("Test", value);
+        onDebouncedChange(value);
       }, 1500);
-      clearTimeout(timerId);
+
+      console.log("finish");
 
       // делает студент
-
       // остановить предыдущий таймер
       // запустить новый на 1500ms, в котором вызовется функция
-
-      //
     }
+
+    setTimerId(timerId);
+    clearInterval(timerId);
   };
 
   return <SuperInputText onChangeText={onChangeTextCallback} {...restProps} />;
 };
 
 export default SuperDebouncedInput;
-
-// ------------------------
-
-// useEffect(() => {
-//     const intervalId = setInterval(() => {
-//       setBtc(prevBtc => prevBtc + 1);
-//     }, 1000);
-
-//     return () => clearInterval(intervalId); // Очистка интервала при размонтировании
-//   }, []);
