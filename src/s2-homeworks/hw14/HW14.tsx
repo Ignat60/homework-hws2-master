@@ -57,7 +57,7 @@ const HW14 = () => {
 
   useEffect(() => {
     const params = Object.fromEntries(searchParams);
-    console.log("useEffect", params);
+
     sendQuery(params.find || "");
     setFind(params.find || "");
   }, []);
@@ -79,12 +79,13 @@ const HW14 = () => {
           onChangeText={onChangeText}
           onDebouncedChange={sendQuery}
         />
+        <div className={s.text}>
+          <div id={"hw14-loading"} className={s.loading}>
+            {isLoading ? "...ищем" : <br />}
+          </div>
 
-        <div id={"hw14-loading"} className={s.loading}>
-          {isLoading ? "...ищем" : <br />}
+          {mappedTechs}
         </div>
-
-        {mappedTechs}
       </div>
     </div>
   );
