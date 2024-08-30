@@ -31,9 +31,15 @@ const HW14 = () => {
   const [techs, setTechs] = useState<string[]>([]);
 
   const sendQuery = (value: string) => {
-    // debugger;
+    console.log("sendQuery", value);
     setLoading(true);
+
     getTechs(value).then((res) => {
+      const r = res?.data.techs;
+      console.log(r);
+      setLoading(false);
+      setTechs(r || []);
+      // setFind(res)
       // делает студент
       // сохранить пришедшие данные
       //
@@ -42,17 +48,16 @@ const HW14 = () => {
 
   const onChangeText = (value: string) => {
     setFind(value);
-    // debugger;
-    // делает студент
+    setSearchParams({ techs });
 
+    // делает студент
     // добавить/заменить значение в квери урла
     // setSearchParams(
-
-    //
   };
 
   useEffect(() => {
     const params = Object.fromEntries(searchParams);
+    console.log("useEffect", params);
     sendQuery(params.find || "");
     setFind(params.find || "");
   }, []);
