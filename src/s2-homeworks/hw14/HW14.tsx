@@ -30,6 +30,8 @@ const HW14 = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [techs, setTechs] = useState<string[]>([]);
 
+  console.log("setFind", find);
+
   const sendQuery = (value: string) => {
     console.log("sendQuery", value);
     setLoading(true);
@@ -49,17 +51,18 @@ const HW14 = () => {
   const onChangeText = (value: string) => {
     setFind(value);
     setSearchParams({ techs });
-
+    // debugger
     // делает студент
     // добавить/заменить значение в квери урла
     // setSearchParams(
   };
 
   useEffect(() => {
+    // debugger;
     const params = Object.fromEntries(searchParams);
-
     sendQuery(params.find || "");
     setFind(params.find || "");
+    console.log(params);
   }, []);
 
   const mappedTechs = techs.map((t) => (
