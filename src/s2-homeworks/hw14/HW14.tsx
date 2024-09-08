@@ -30,15 +30,15 @@ const HW14 = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [techs, setTechs] = useState<string[]>([]);
 
-  console.log("setFind", find);
+  // console.log("setFind", find);
 
   const sendQuery = (value: string) => {
-    console.log("sendQuery", value);
+    // console.log("sendQuery", value);
     setLoading(true);
 
     getTechs(value).then((res) => {
       const r = res?.data.techs;
-      console.log(r);
+      // console.log(r);
       setLoading(false);
       setTechs(r || []);
       // setFind(res)
@@ -62,7 +62,7 @@ const HW14 = () => {
     const params = Object.fromEntries(searchParams);
     sendQuery(params.find || "");
     setFind(params.find || "");
-    console.log(params);
+    // console.log(params);
   }, []);
 
   const mappedTechs = techs.map((t) => (
