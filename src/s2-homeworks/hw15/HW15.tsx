@@ -49,6 +49,7 @@ const HW15 = () => {
   console.log("page:", page);
   console.log("count:", count);
   console.log("techs:", techs);
+  console.log("searchParams:", searchParams);
 
   const sendQuery = (params: any) => {
     setLoading(true);
@@ -68,9 +69,10 @@ const HW15 = () => {
     setCount(newCount);
 
     sendQuery({ page, count });
-    // setSearchParams()
-    // debugger;
-    //
+    setSearchParams({
+      pageNamber: page.toString(),
+      numberCount: count.toString(),
+    });
   };
 
   const onChangeSort = (newSort: string) => {
