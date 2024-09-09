@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useDebugValue, useEffect, useState } from "react";
 import s2 from "../../s1-main/App.module.css";
 import s from "./HW15.module.css";
 import axios from "axios";
@@ -48,10 +48,14 @@ const HW15 = () => {
   const [techs, setTechs] = useState<TechType[]>([]);
   console.log("page:", page);
   console.log("count:", count);
+  console.log("techs:", techs);
 
   const sendQuery = (params: any) => {
     setLoading(true);
     getTechs(params).then((res) => {
+      console.log("params:", params);
+      const r = res?.data.techs;
+      setTechs(r || []);
       // делает студент
       // сохранить пришедшие данные
       //
@@ -63,8 +67,8 @@ const HW15 = () => {
     setPage(newPage);
     setCount(newCount);
 
-    // sendQuery(
-    // setSearchParams(
+    sendQuery({ page, count });
+    // setSearchParams()
     // debugger;
     //
   };
