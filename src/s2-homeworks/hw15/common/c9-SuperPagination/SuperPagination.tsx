@@ -21,16 +21,21 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = ({
   // пишет студент // вычислить количество страниц
 
   const lastPage = Math.ceil(totalCount / itemsCountForPage);
-  //   debugger;
-  console.log("lastPage", lastPage);
 
-  const onChangeCallback = (event: any, page: number) => {
-    onChange(page, lastPage);
-    // console.log(page);
+  const onChangeCallbackOnPageChange = (event: any, newPage: number) => {
+    console.log("totalCount", totalCount);
+    console.log("itemsCountForPage", itemsCountForPage);
+    // debugger;
+    onChange(newPage, itemsCountForPage);
+    // console.log(lastPage);
     // debugger;
   };
 
-  const onChangeSelect = (event: any) => {
+  // TODO:
+  const onChangeCallbaclOnSelectChange = (newValue: number) => {
+    // console.log(event.target.value);
+    // debugger;
+    onChange(page, newValue);
     // пишет студент
   };
 
@@ -48,7 +53,7 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = ({
         }}
         page={page}
         count={lastPage}
-        onChange={onChangeCallback}
+        onChange={onChangeCallbackOnPageChange}
         hideNextButton
         hidePrevButton
       />
@@ -59,11 +64,16 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = ({
         id={id + "-pagination-select"}
         value={itemsCountForPage}
         options={[
+          { id: 3, value: 3 },
           { id: 4, value: 4 },
           { id: 7, value: 7 },
+          { id: 5, value: 5 },
+          { id: 8, value: 8 },
           { id: 10, value: 10 },
+          { id: 20, value: 20 },
         ]}
-        onChange={onChangeSelect}
+        // onChange={onChangeCallbaclOnSelectChange}
+        onChangeOption={onChangeCallbaclOnSelectChange}
       />
 
       <span className={s.text2}>строк в таблице</span>
